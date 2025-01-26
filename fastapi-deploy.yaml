@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: ECR Container
+        image: DOCKER_IMAGE
         ports:
         - containerPort: 80
