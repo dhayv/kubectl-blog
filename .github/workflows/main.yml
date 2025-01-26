@@ -49,4 +49,4 @@ jobs:
         run: |
           sed -i.bak "s|DOCKER_IMAGE|$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG|g" fastapi-deploy.yaml
           kubectl apply -f fastapi-deploy.yaml
-          kubectl apply -f service-deploy.yaml
+          kubectl apply -f fastapi-service.yaml
