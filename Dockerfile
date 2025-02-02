@@ -14,7 +14,7 @@ WORKDIR /code
 
 COPY --from=builder /code /usr/local
 
-COPY . /code
+COPY main.py /code
 
 EXPOSE 80
 
