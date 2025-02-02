@@ -1,18 +1,20 @@
 # stage 1
-FROM python:3.12 AS base
+FROM python:3.11.9 AS builder
 
 WORKDIR /code
 
-COPY ./requirements.txt /code/requirements.txt
+COPY requirements.txt .
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade --prefix=/code -r requirements.txt
 
 # stage 2
-FROM python:3.12-slim
+FROM python:3.11.9-slim
 
 WORKDIR /code
 
-COPY --from=base /code /code
+COPY --from=builder /code /usr/local
+
+COPY . /code
 
 EXPOSE 80
 
