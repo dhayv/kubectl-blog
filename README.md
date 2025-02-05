@@ -1,6 +1,6 @@
 # Secure EKS Pipeline for FastAPI
 
-**[Read the full blog post here](https://dev.to/dhayv/build-a-secure-cicd-pipeline-for-amazon-eks-using-github-actions-and-aws-oidc-3b0m/edit)
+**[Read the full blog post here](https://dev.to/dhayv/build-a-secure-cicd-pipeline-for-amazon-eks-using-github-actions-and-aws-oidc-3b0m)**
 
 ## Overview
 This repository demonstrates how to build a **secure AWS EKS (Kubernetes) CI/CD pipeline** for a **FastAPI** application using **GitHub Actions**, **Docker**, and **OpenID Connect (OIDC)**. It follows **AWS security best practices** such as least-privilege IAM policies, private cluster endpoints, and automatic deployments—**all without storing static AWS credentials** in your repository.
